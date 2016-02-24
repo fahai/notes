@@ -45,9 +45,44 @@ A test method is a Java method annotated by @Test in your source.
 ## 注解  
 
 testng.xml文件怎么让程序读取  
-The difference   of include and exclude
+The difference of include and exclude
 
 
+## Java Web 中如何使用JUnit
+
+如何写好单元测试
+
+http://wiki.jikexueyuan.com/project/junit/extensions.html
 
 
-7558335425
+//在所有测试方法前执行一次
+@BeforeClass    
+
+//在所有测试方法后执行一次
+@AfterClass  
+
+//在每个测试方法前执行
+@Before   
+
+//在每个测试方法后执行
+@After    
+
+// 测试方法执行超过1000毫秒后算超时，测试将失败
+@Test(timeout = 1000)   
+
+// 测试方法期望得到的异常类
+@Test(expected = Exception.class)    
+
+// 执行测试时将忽略掉此方法，如果用于修饰类，则忽略整个类
+@Ignore(“not ready yet”)  
+
+
+http://ju.outofmemory.cn/entry/135429
+
+Aa@3638821
+
+## TODO  
+如何让gradle到指定目录读取jar  
+如何写好单元测试
+  一个方法写多个单元测试如何写？写多个assert  
+  void方法如何写assert？

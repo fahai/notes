@@ -136,6 +136,8 @@ for n in 22413315 22413314;do find -inum $n -exec rm -rf {} \;;done
 $n是变量名，与for后面定义的一致，其它没啥好说的，适用其它操作。
 
 
+while ( sleep 1 ) ; do ps -p 7172 -o %cpu,%mem,rss ; done
+
 
 ## Bash快捷键  
 编辑命令

@@ -30,13 +30,13 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ ->
 双击右侧的DisplayName，在‘数值数据’中输入你想改成的服务名，
 然后退出注册表编辑器，再重启机器即可。
 
-  
+
 ## Chrome删除一条网址提示
 出现提示网址的提示后，按键盘上的“箭头下”，即时只有一个也按下键；让蓝色阴影选中第一个网址，然后按shift+delete
 
 
 ## Useful Website
-http://www.cnblogs.com/ 
+http://www.cnblogs.com/
 http://news.dbanotes.net/
 http://toutiao.io/
 http://www.importnew.com/
@@ -49,15 +49,15 @@ http://www.jb51.net/article/32348.htm
 如果由安装过客户端，建议先全部删光光，再安装服务端
 删除环境变量ORACLE_HOME和PATH，注册表，C盘的Oracle目录
 
-IMP-00058： 
+IMP-00058：
 没有显示任何信息，使用sqlplus或者plsql登录用户
 
 如何查看服务器有多少个数据库
 右击我的电脑--管理--服务，查找跟oracle有关的那个服务。
 我的oracle是10g版本的。
-比方说我的oracle中就有两个数据库(WANG和ORCL)：就有这两个数据库的服务名。 
+比方说我的oracle中就有两个数据库(WANG和ORCL)：就有这两个数据库的服务名。
               OracleServiceWANG
-              OracleServiceORCL 
+              OracleServiceORCL
 你要查多少个数据库是不是，就看看你的服务中，不管启动没启动的，有多少个类似这种服务名的。
 
 
@@ -71,12 +71,12 @@ SQL> grant connect,resource to news;  --表示把 connect,resource权限授予ne
 SQL> grant dba to news;  --表示把 dba权限授予给news用户
 
 
-## 在Windows中根据IP地址来查询计算机名 
+## 在Windows中根据IP地址来查询计算机名
 ping -a 192.168.1.111        //查看计算机名
 或者
 nbtstat -a 192.168.1.111     //查看的是计算机名、工作组和MAC地址
 再或者使用软件Lansee
- 
+
 查看网上邻居的共享：
 net view 192.168.1.111      //查看的是计算机描述和相关的共享文件
 
@@ -110,7 +110,7 @@ cd ~      #同样也是回到主目录
 
 
 ## 护眼色 参数
-色调85，饱和度90，亮度205 
+色调85，饱和度90，亮度205
 
 ## TC 显示SVN文件夹图标
 在Total command中显示Tortoise svn叠置图标的方法
@@ -178,38 +178,6 @@ excel的查找函数用作转义
 ### 开发准备  
 源数据库：执行新建用户脚本
 目标数据库：执行新建用户脚本
-
-## Eclipse
-### 反编译插件JadClipse
-jad: 一个将.calss文件反编译成.java源文件的工具
-  http://varaneckas.com/jad/ 
-
-JadClipse: Eclipse plugins
-  http://sourceforge.net/projects/jadclipse/
-
-Install: 
-  Download jad files;
-  copy jad %JAVA_HOME%/bin;
-  Download jadclipse files;
-  copy net.sf.jadclipse_3.3.0.jar %ECLIPSE_HOME%/plugins
-  Open Eclipse: Windows->Preferences->Java->JadClipse
-    "path to decompiler" : %JAVA_HOME%/bin/jad
-  Windowns->Preference->General->Editor->File Associations
-    ".class" default "JadClipse Class File Viewer"
-  Done
-
-### SVN插件  
-http://www.cnblogs.com/ruiati/p/3584120.html  
-How to use
-
-### 更改编辑器字体大小
-1.更改java文件大小设置
-Window->preferences->General->Appearance->Colors   and   Fonts->
-Java->Java Editor Text Font->右边按钮Change 
-英文版默认的是Courier New 常规 10
-2.更改jsp文件大小设置
-Window->preferences->General->Appearance->Colors   and   Fonts->
-Basic->TextFont->右边按钮Change 
 
 
 ## ToDoList  
@@ -320,3 +288,83 @@ db.COLLECTION_NAME.drop()
 
 ## secureCRT远程连接Linux，Alt+.快捷键被secureCRT占用
 option -> session options -> termianl -> emulation -> use alt as meta key
+
+
+
+## 云服务器  
+
+第一次使用云服务器的旅行
+root用户登录，新建普通用户fahai
+vim /etc/passwd
+vim /etc/group
+vim /etc/shadow
+useradd -m fahai
+passwd fahai
+putty不显示当前所在目录，tab键不能补全
+  跟ssh客户端配置没有关系，跟用户所用的bash shell有关系
+  查看用户有没有配置bash shell：vim /etc/passwd | grep fahai
+  chsh -s /bin/bash 不生效
+  userdel fahai
+  useradd -m -s /bin/bash fahai
+  passwd fahai
+
+需要把软件安装到/opt目录，把/opt的目录权限赋给fahai用户
+  root用户把软件解压到/opt目录，再把目录权限改成fahai
+
+使用FTP传输文件
+http://help.aliyun.com/knowledge_detail/5973937.html?spm=5176.788314854.3.3.fhRVd1
+4.0注册码
+——– FlashFXP Registration Data START ——–
+FLASHFXPvwCYA16pvwAAAAC2WpcNKwTnwbveeFsasruCD7nTNE
+qX/qsvG2UWCyyzmq8cYPqQAZVLclU3WLP9a1BBDpcCDPBi37v4
+mlDCL0hAL/D+yVcY1xiEyEGWJ9msVQ9BN1PN8n9o5TtxNH6GPs
+Kd1655TdjSJqvksIQfOMeVcG/KngWSJxpEAqPTLU0kJSkjKktd
+vdUni+hN2AQVCxco22m/XzEyVMSz34G2eBU55WXffnsVnfObC7
+VFmA==
+——– FlashFXP Registration Data END ———-
+
+安装JDK
+  解压安装文件
+  配置环境变量
+  验证安装是否成功
+
+安装tomcat
+  解压安装文件即可使用
+
+安装MySQL
+
+
+安装PHP
+
+
+安装apache2
+  sudo apt-get install apache2
+  安装完成。 
+  运行如下命令重启下：
+  sudo /etc/init.d/apache2 restart
+  在浏览器里输入http://localhost或者是http://127.0.0.1，如果看到了It works!，那就说明Apache就成功的安装了，Apache的默认安装，会在/var下建立一个名为www的目录，这个就是Web目录了，所有要能过浏览器访问的Web文件都要放到这个目录里。
+
+  AH00558: apache2: Could not reliably determine the server's fully qualified domain name
+  找到apache2的配置文件目录：wereis apache2
+  vim /etc/apache2/apache2.conf
+  [root@server conf]# vi httpd.conf
+  #ServerName www.example.com:80
+  ServerName localhost:80
+
+
+
+验证php是否生效
+vim /var/www/html/test.php
+<?php
+  phpinfo()
+?>
+http://112.74.15.179/test.php
+
+
+fahai
+sg5Flq1tpP68VOUjMO
+
+
+迁移wordpress站点
+  迁移数据库
+  迁移网站文件

@@ -15,6 +15,12 @@ Struts2 Spring Hibernate
 3. Create an Action class to control the interaction between the user, the model, and the view (the controller)  
 4. Create a mapping (struts.xml) to couple the Action class and view  
 
+
+### FAQ  
 [Struts2如何加载struts.xml配置文件](http://blog.csdn.net/zht666/article/details/8980451)  
 [web.xml配置Struts2的拦截器](http://struts.apache.org/docs/webxml.html)  
-TODO： 补充HelloWorld程序的序列图   
+
+TODO：
+补充HelloWorld程序的序列图   
+如何动态载入多个struts.xml文件  
+struts.xml中如何读取资源文件，例如jsp文件  
